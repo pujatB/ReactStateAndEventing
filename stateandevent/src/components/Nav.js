@@ -1,5 +1,8 @@
 import React from 'react'
 import './nav.css'
+import Home from "./Home";
+import Categories from "./Categories";
+import Back from "./Back";
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,10 +13,7 @@ import {
 
 const Nav = () => {
     return (
-       
-    
-   
-        <div className="home">
+       <div className="home">
           <div className="heading">
             {/* <Animated.View style={{transform: [{rotate: spin}] }} > */}
             <img
@@ -72,7 +72,9 @@ const Nav = () => {
             </span>
 
           </div>
+         
         </div>
+        
        
     )
 }
