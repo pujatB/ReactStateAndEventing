@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
-import FaveButton from './components/FaveButton';
-import './App.css';
-import TextTransition, { presets } from "react-text-transition";
+import logo from "./logo.svg";
+import "./App.css";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Categories from "./components/Categories";
+import Back from "./components/Back";
+import { useState } from "react";
+import FaveButton from "./components/FaveButton"
 
-const TEXTS = [
-  "A",
-  "Real",
-  "State",
-  "of",
-  "Events"
-];
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
-
-  //Newly Added 
-
 
   // Old
   const [username, setUsername] = useState("");
@@ -47,24 +43,17 @@ function App() {
   // Pass explicit arguments to event handlers
   const renderStories = () => stories.map(st => <li key={st.id} onClick={() => handleStorySelect(st.id)}><FaveButton /> <strong role="heading" aria-label="headline">{st.headline}</strong> {st.snippet}</li>)
 
-  // Newly Addded 
-  const [index, setIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const intervalId = setInterval(() =>
-      setIndex(index => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
-
   return (
-    <div class="new-container">
-      <div class="page-title">
-        <TextTransition
-          text={TEXTS[index % TEXTS.length]}
-          springConfig={presets.wobbly}
-        />
+    <div>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/about" component={Categories}></Route>
+            <Route exact path="/menu" component={Back}></Route>
+          </Switch>
+        </Switch>
       </div>
       <div className="news-reader">
         {/* <h1>A Real State of Events</h1> */}
@@ -105,7 +94,6 @@ function App() {
           }
 
         </section>
-
       </div>
     </div>
 
