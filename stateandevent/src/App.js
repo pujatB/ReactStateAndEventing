@@ -5,12 +5,17 @@ import Home from "./components/Home";
 import Categories from "./components/Categories";
 import Back from "./components/Back";
 import { useState } from "react";
+import { useContext } from "react";
 import FaveButton from "./components/FaveButton"
+import React from 'react'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function App() {
+
+  // Create Context
+  const UsernameContext = React.createContext();
 
   // Old
   const [username, setUsername] = useState("");
@@ -63,7 +68,9 @@ function App() {
 
         <aside>
           {/* Conditional rendering example 1 */}
-          <h3 aria-label="greeting" id="greeting">Hi there, {username ? username : 'friend'}!</h3>
+          <UsernameContext.Provider>
+            <h3 aria-label="greeting" id="greeting">Hi there, {username ? username : 'friend'}!</h3>
+          </UsernameContext.Provider>
 
           {/* Form handling */}
           <form onSubmit={handleFormSubmit}>

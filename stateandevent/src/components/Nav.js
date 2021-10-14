@@ -60,7 +60,7 @@ const Nav = () => {
             activeStyle={{
               fontWeight: "bold",
               fontSize: "1.1em",
-              color: "blue",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -75,7 +75,7 @@ const Nav = () => {
             activeStyle={{
               fontWeight: "bold",
               fontSize: "1.1em",
-              color: "blue",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -90,7 +90,7 @@ const Nav = () => {
             activeStyle={{
               fontWeight: "bold",
               fontSize: "1.1em",
-              color: "blue",
+              color: "black",
               textDecoration: "none",
             }}
           >
