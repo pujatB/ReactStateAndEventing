@@ -1,6 +1,9 @@
 import React from 'react'
 import './nav.css'
 import TextTransition, { presets } from "react-text-transition";
+import Home from "./Home";
+import Categories from "./Categories";
+import Back from "./Back";
 import {
   BrowserRouter as Router,
   Switch,

@@ -47,14 +47,17 @@ function App() {
     <div>
       <div className="App">
         <Nav />
+
         <Switch>
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/about" component={Categories}></Route>
-            <Route exact path="/menu" component={Back}></Route>
-          </Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/categories" component={Categories}></Route>
+          <Route exact path="/back" component={Back}></Route>
         </Switch>
       </div>
+
+
+      {/* From the previous app */}
+
       <div className="news-reader">
         {/* <h1>A Real State of Events</h1> */}
 
