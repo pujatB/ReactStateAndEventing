@@ -50,3 +50,8 @@
   font-size: 35px;
   font-family: 'News Cycle', sans-serif;
 }
+
+.news-reader{
+  display: flex;
+  flex-direction: column;
+}

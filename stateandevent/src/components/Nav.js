@@ -83,21 +83,6 @@ const Nav = () => {
           </NavLink>
         </span>
 
-        <span className="navButton">
-          <NavLink
-            className="navLink"
-            to="/back"
-            activeStyle={{
-              fontWeight: "bold",
-              fontSize: "1.1em",
-              color: "black",
-              textDecoration: "none",
-            }}
-          >
-            Back
-          </NavLink>
-        </span>
-
       </div>
     </div>
 
