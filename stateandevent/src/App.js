@@ -4,6 +4,8 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Categories from "./components/Categories";
 import Back from "./components/Back";
+import { useState } from "react";
+import FaveButton from "./components/FaveButton"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -51,7 +53,7 @@ function App() {
       </Switch>
     </div>
     <div className="news-reader">
-      <h1>A Real State of Events</h1>
+      {/* <h1>A Real State of Events</h1> */}
 
       <aside>
         {/* Conditional rendering example 1 */}
