@@ -19,22 +19,20 @@ const TEXTS = [
   "Events"
 ];
 
-// Newly Addded 
-const [index, setIndex] = React.useState(0);
-
-React.useEffect(() => {
-  const intervalId = setInterval(() =>
-    setIndex(index => index + 1),
-    3000 // every 3 seconds
-  );
-  return () => clearTimeout(intervalId);
-}, []);
 
 const Nav = () => {
+  // Newly Addded 
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() =>
+      setIndex(index => index + 1),
+      2000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
-
-
-
     <div className="home">
       <div className="heading">
         {/* <Animated.View style={{transform: [{rotate: spin}] }} > */}
@@ -44,11 +42,11 @@ const Nav = () => {
         />
         {/* </Animated.View> */}
         {/* <h1>A Real State of Events</h1> */}
-        <TextTransition
-          text={TEXTS[index % TEXTS.length]}
-          springConfig={presets.wobbly}
-        />
       </div>
+      <TextTransition
+        text={TEXTS[index % TEXTS.length]}
+        springConfig={presets.wobbly}
+      />
 
       <div className="nav">
         <span className="navButton">
